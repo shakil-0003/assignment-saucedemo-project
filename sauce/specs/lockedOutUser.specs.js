@@ -1,4 +1,4 @@
-const lockedOutActions = require("../loginLockedOut/lockedOutActions");
+const lockedOutActions = require("../lockedoutuser/lockedOutActions");
 
 const userName = "locked_out_user";
 const password = "secret_sauce";
