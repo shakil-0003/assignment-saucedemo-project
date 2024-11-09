@@ -1,9 +1,13 @@
 const LoginGlitchUserActions = require("../glitchUser/login/glitchUserLoginActions");
 const FilterActions = require("../glitchUser/filter/filterActions");
 const addToCartActions = require("../glitchUser/addtocart/addToCartActions");
+const glitchCheckoutActions = require("../glitchUser/checkout/glitchCheckoutActions");
 
 const userName = "performance_glitch_user";
 const password = "secret_sauce";
+const firstName = "First Name"
+const lastName = "Last Name"
+const postalCode = "Postal Code"
 
 describe("suace site login journey", () => {
     it("Should able to successfully login", async () => {
@@ -36,6 +40,24 @@ describe("suace site login journey", () => {
         await addToCartActions.selectProduct();
         await browser.pause(2000);
         await addToCartActions.clickOnAddToCart();
+        await browser.pause(2000);
+    });
+
+
+    it("Should able to successfully checkout", async () => {
+        await glitchCheckoutActions.clickOnShoppingCartButton();
+        await browser.pause(2000);
+        await glitchCheckoutActions.clickOnCheckoutButton();
+        await browser.pause(2000);
+        await glitchCheckoutActions.enterFisrtName(firstName);
+        await browser.pause(2000);
+        await glitchCheckoutActions.enterLastName(lastName);
+        await browser.pause(2000);
+        await glitchCheckoutActions.enterPostalCode(postalCode);
+        await browser.pause(2000);
+        await glitchCheckoutActions.continueCheckout();
+        await browser.pause(2000);
+        await glitchCheckoutActions.finishCheckout();
         await browser.pause(2000);
     });
 
