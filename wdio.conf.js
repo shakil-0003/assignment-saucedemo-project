@@ -1,4 +1,6 @@
-const loginUser = "sauce/specs/login.specs.js";
+const lockedOutUser = "sauce/specs/lockedOutUser.specs.js";
+const standardUser = "sauce/specs/standardUser.specs.js";
+const glitchUser = "sauce/specs/glitchUser.specs.js";
 
 exports.config = {
     //
@@ -22,7 +24,7 @@ exports.config = {
     // The path of the spec files will be resolved relative from the directory of
     // of the config file unless it's absolute.
     //
-    specs: [loginUser],
+    specs: [lockedOutUser, standardUser, glitchUser],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
