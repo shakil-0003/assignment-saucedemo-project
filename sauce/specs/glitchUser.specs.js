@@ -1,13 +1,15 @@
 const LoginGlitchUserActions = require("../glitchUser/login/glitchUserLoginActions");
+const ResetAppStateActions = require("../glitchUser/resetappstate/resetAppStateActions")
 const FilterActions = require("../glitchUser/filter/filterActions");
 const addToCartActions = require("../glitchUser/addtocart/addToCartActions");
 const glitchCheckoutActions = require("../glitchUser/checkout/glitchCheckoutActions");
+const LogoutActions = require("../glitchUser/logout/glitchLogoutActions");
 
 const userName = "performance_glitch_user";
 const password = "secret_sauce";
-const firstName = "First Name"
-const lastName = "Last Name"
-const postalCode = "Postal Code"
+const firstName = "MD"
+const lastName = "Shakil"
+const postalCode = "1236"
 
 describe("suace site login journey", () => {
     it("Should able to successfully login", async () => {
@@ -20,11 +22,11 @@ describe("suace site login journey", () => {
     });
 
     it("Should able to successfully reset app state", async () => {
-        await LoginGlitchUserActions.clickOnMenuBar();
+        await ResetAppStateActions.clickOnMenuBar();
         await browser.pause(2000);
-        await LoginGlitchUserActions.clickOnReset();
+        await ResetAppStateActions.clickOnReset();
         await browser.pause(2000);
-        await LoginGlitchUserActions.clickCloseMenu();
+        await ResetAppStateActions.clickCloseMenu();
         await browser.pause(2000);
     });
 
@@ -59,6 +61,23 @@ describe("suace site login journey", () => {
         await browser.pause(2000);
         await glitchCheckoutActions.finishCheckout();
         await browser.pause(2000);
+        await glitchCheckoutActions.clickOnBackHome();
+        await browser.pause(2000);
+    });
+
+
+    it("Should able to successfully reset app state", async () => {
+        await ResetAppStateActions.clickOnMenuBar();
+        await browser.pause(2000);
+        await ResetAppStateActions.clickOnReset();
+        await browser.pause(2000);
+    });
+
+
+    it("Should able to successfully logout", async () => {
+        await LogoutActions.clickOnLogoutButton();
+        await browser.pause(2000);
+
     });
 
 

@@ -1,4 +1,4 @@
-class LoginStandardLocators {
+class StandardUserLoginLocators {
     get loginInputUsername(){
         return $("//input[@name='user-name']");
     }
@@ -11,8 +11,6 @@ class LoginStandardLocators {
         return $("//input[@name='login-button']");
     }
 
-
-
 }
 
-module.exports = new LoginStandardLocators();
+module.exports = new StandardUserLoginLocators();

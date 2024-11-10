@@ -28,6 +28,11 @@ class CheckoutActions{
         await checkoutLocators.finishCheckout.click();
     }
 
+
+    async clickOnBackHome(){
+        await checkoutLocators.backHome.click();
+    }
+
 }
 
 module.exports = new CheckoutActions();

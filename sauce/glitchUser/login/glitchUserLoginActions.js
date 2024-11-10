@@ -12,18 +12,6 @@ class LoginGlitchUserActions {
         await LoginGlitchUserLocators.loginButton.click();
     }
 
-    async clickOnMenuBar(){
-        await LoginGlitchUserLocators.burgerMenu.click();
-    }
-
-    async clickOnReset(){
-        await LoginGlitchUserLocators.resetAppState.click();
-    }
-
-    async clickCloseMenu(){
-        await LoginGlitchUserLocators.closeMenu.click();
-    }
-
 
 }
 

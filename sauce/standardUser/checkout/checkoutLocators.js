@@ -1,9 +1,5 @@
 class CheckoutLocators{
 
-    get shoppingCart(){
-        return $("//div[@id = 'shopping_cart_container']");
-    }
-
     get checkoutButton(){
         return $("//button[@id = 'checkout']");
     }
